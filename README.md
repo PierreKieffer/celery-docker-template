@@ -1,6 +1,6 @@
 # Celery Docker Template
 
-Template to build docker distributed systems based on Celery.  
+Template to build Celery Docker distributed systems.  
 
 ```bash
 ┌──────────────────────────────────────────────────────────────────────────────────────┐
