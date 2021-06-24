@@ -68,7 +68,7 @@ Redis instance is needed to build services (host resolution), so this command wi
 Celery worker image name is `celery-worker-$MOD_NAME` with `MOD_NAME` the module file name deployed. 
 
 ## Deploy 
-Deploy a worker container : 
+Deploy worker container : 
 ```bash 
 make run 
 ```
