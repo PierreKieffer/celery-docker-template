@@ -48,6 +48,7 @@ sudo apt install -y make
 CONCURRENCY=2
 ```
 Max value is number of available cores on the machine. 
+
 For high intensity tasks, it's better to set a lower concurrency value to save memory and cpu allocation for running tasks. 
 
 - `MOD_PATH` : 
@@ -62,7 +63,8 @@ Build celery worker image.
 ```bash 
 make build 
 ```
-Redis instance is needed to build services (host resolution), so this command will first start Redis container if not started yet. 
+Redis instance is needed to build services (host resolution), so this command will first start Redis container if a Redis host is not found. 
+
 Celery worker image name is `celery-worker-$MOD_NAME` with `MOD_NAME` the module file name deployed. 
 
 ## Deploy 
@@ -72,6 +74,7 @@ make run
 ```
 ## Shared mount point 
 Back up and share data through the shared mount point. 
+
 On host, shared mount point is set to `/tmp/celery/celery-worker-$MOD_NAME`
 ```bash
 >/tmp$ 
