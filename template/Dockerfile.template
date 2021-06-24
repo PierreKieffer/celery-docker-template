@@ -1,0 +1,16 @@
+FROM python:3.8-slim
+
+ENV REDIS=
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+RUN mkdir /app
+
+WORKDIR /app 
+COPY . /app
+RUN pip install -r /app/requirements.txt
+
+WORKDIR /app
+
+CMD celery -A MOD_NAME worker --concurrency= -B --loglevel=info
