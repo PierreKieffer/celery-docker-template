@@ -53,7 +53,7 @@ For high intensity tasks, it's better to set a lower concurrency value to save m
 
 - `MOD_PATH` : 
 ```bash
-MOD_PATH=mods/tasks.py
+MOD_PATH=mods/example.py
 ```
 Module file path with @celery.task who needs to to be deployed. 
 
